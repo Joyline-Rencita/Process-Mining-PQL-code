@@ -43,3 +43,18 @@ CALC_THROUGHPUT(
   )
 )
 
+
+
+Factory Calendar  :
+
+CALC_THROUGHPUT(
+  CASE_START TO CASE_END,
+  REMAP_TIMESTAMPS(
+    "ACTIVITIES"."TIMESTAMP",
+    HOURS,
+    FACTORY_CALENDAR(
+      "FACTORY_TABLE"."Start",
+      "FACTORY_TABLE"."End"
+    )
+  )
+)

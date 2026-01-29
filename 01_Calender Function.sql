@@ -58,3 +58,25 @@ CALC_THROUGHPUT(
     )
   )
 )
+
+
+
+
+Intersect :
+
+CALC_THROUGHPUT(
+  CASE_START TO CASE_END,
+  REMAP_TIMESTAMPS(
+    "ACTIVITIES"."TIMESTAMP",
+    HOURS,
+    INTERSECT(
+      WORKDAY_CALENDAR("TFACS", 'DE'),
+      WEEKDAY_CALENDAR(
+        MONDAY 09:00 - 17:00
+        TUESDAY 09:00 - 17:00,
+        THURSDAY 09:00 - 17:00,
+        FRIDAY 09:00 - 17:00
+      )
+    )
+  )
+)

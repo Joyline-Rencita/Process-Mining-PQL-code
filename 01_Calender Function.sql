@@ -31,3 +31,15 @@ CALC_THROUGHPUT(
 
 Workday Calendar :
 
+CALC_THROUGHPUT(
+  CASE_START TO CASE_END,
+  REMAP_TIMESTAMPS(
+    "ACTIVITIES"."TIMESTAMP",
+    DAYS,
+    WORKDAY_CALENDAR(
+      "TFACS",
+      'DE'
+    )
+  )
+)
+

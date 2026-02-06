@@ -1,0 +1,6 @@
+AVG (
+  CASE WHEN "_CEL_P2P_ACTIVITIES"."USER_TYPE" = 'B'
+  THEN 1
+  ELSE 0
+  END
+)

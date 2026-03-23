@@ -4,11 +4,14 @@ FILTER (
   ) 
   AND  "ACDOCA_AP_SUSPENSE"."BUDAT" <=  {d '<%=date_filter%>'}
 
-  
 2. Component Filter Benchmarking in Analysis:
     FILTER <%=v_Dimension%> IN ('<%=v_Sub_Dimension_1%>')
 
 3. Filter for concantenated columns:
    FILTER ${ (dimension_benchmark ==="companycode_cc" && "EKPO.BUKRS ||' - '|| EKPO.BUKRS_TEXT") } = '${benchmark_1}'
 
-4.
+4. Benchmark comparing two timeframes:
+  TO_DATE(<%= DAY_INICIO %>||'-'||<%= MONTH_INICIO %>||'-'||<%= YEAR_INICIO %>,FORMAT('%d-%m-%Y'))
+  TO_DATE(<%= DAY_FIN %>||'-'||<%= MONTH_FIN %>||'-'||<%= YEAR_FIN %>,FORMAT('%d-%m-%Y'))
+
+5. 

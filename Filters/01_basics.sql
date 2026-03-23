@@ -10,3 +10,5 @@ FILTER (
 
 3. Filter for concantenated columns:
    FILTER ${ (dimension_benchmark ==="companycode_cc" && "EKPO.BUKRS ||' - '|| EKPO.BUKRS_TEXT") } = '${benchmark_1}'
+
+4.

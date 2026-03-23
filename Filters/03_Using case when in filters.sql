@@ -1,0 +1,5 @@
+FILTER (
+    ( ISNULL(DATE_1) = 0 AND DATE_1 < TODAY() )
+    OR
+    ( ISNULL(DATE_1) = 1 AND DATE_2 < TODAY() )
+);

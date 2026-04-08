@@ -1,4 +1,4 @@
-1. date range filter:
+1. Date range filter:
 FILTER (
   "ACDOCA_AP_SUSPENSE"."AUGBL" IS NULL OR "ACDOCA_AP_SUSPENSE"."AUGDT" >  {d '<%=date_filter%>'}
   ) 

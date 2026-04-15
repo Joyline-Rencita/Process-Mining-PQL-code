@@ -14,4 +14,3 @@ FILTER (
   TO_DATE(<%= DAY_INICIO %>||'-'||<%= MONTH_INICIO %>||'-'||<%= YEAR_INICIO %>,FORMAT('%d-%m-%Y'))
   TO_DATE(<%= DAY_FIN %>||'-'||<%= MONTH_FIN %>||'-'||<%= YEAR_FIN %>,FORMAT('%d-%m-%Y'))
 
-5. 
